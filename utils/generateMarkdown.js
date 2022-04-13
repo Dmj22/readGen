@@ -492,6 +492,54 @@ DEALINGS IN THE SOFTWARE.
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
   return `# ${data.title}
+
+  ${renderLicenseBadge(data.license)}
+  
+  # Table of Content
+  -[description](#description)
+  -[installation](#installation)
+  -[usage](#usage)
+  -[license](#license)
+  -[contribution](#contribution)
+  -[test](#test)
+  -[username](#username)
+  -[profile](#profile)
+  
+  
+  ## username:
+  ${data.username}
+  
+ 
+  ## project:
+  ${data.project}
+  
+  ## email:
+  ${data.email}
+  
+  ## description:
+  ${data.description}
+  
+ 
+  ## installation:
+  ${data.installation}
+  
+  ## usage:
+  ${data.usage}
+  
+  
+  ## contribution:
+  ${data.contribution}
+  
+  
+  ## test
+  ${data.test}
+  
+  
+  ## license:
+  ${data.license}
+  ${renderLicenseLink(data.license)}
+  ${renderLicenseSection(data.license, data.name)}
+
 `;
 }
 
