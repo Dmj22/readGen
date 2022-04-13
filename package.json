@@ -1,0 +1,14 @@
+{
+  "name": "readgen",
+  "version": "1.0.0",
+  "description": "readme generator",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "dmj22",
+  "license": "ISC",
+  "dependencies": {
+    "inquirer": "^8.2.2"
+  }
+}
