@@ -1,10 +1,11 @@
-
 // TODO: Include packages needed for this application
 const fs = require("fs");
 const inquirer = require('inquirer');
-const generateMarkdown = require('./generateMarkdown')
+const generateMarkdown = require('./utils/generateMarkdown')
+
 // TODO: Create an array of questions for user input
-const questions = [{
+const questions = [
+   {
     type: "input",
     name: "username",
     message: "Enter your GitHub Username (Required)",
@@ -85,17 +86,20 @@ const questions = [{
 
 
 
+
+
 // TODO: Create a function to initialize app
-function init() {function init () {
-    inquirer.prompt(questions)
-    .then((inquirerResponse) => {   
-        console.log("Making ReadMe");
-        fs.writeFileSync("ReadMe.md", generateMarkdown(inquirerResponse));
-    })
-    .catch((err) => {
-        console.log(err);
-    })
-  }
+function init () {
+  inquirer.prompt(questions)
+  .then((inquirerResponse) => {   
+      console.log("Making ReadMe");
+      fs.writeFileSync("ReadMe.md", generateMarkdown(inquirerResponse));
+  })
+  .catch((err) => {
+      console.log(err);
+  })
+}
+
 
 // Function call to initialize app
 init();
